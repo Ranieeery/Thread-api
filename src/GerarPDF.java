@@ -1,6 +1,11 @@
-public class GerarPDF implements Runnable{
+public class GerarPDF extends Thread{
     @Override
     public void run() {
-        System.out.println("Gerar PDF");
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
+        System.out.println("\nPDF gerado");
     }
 }

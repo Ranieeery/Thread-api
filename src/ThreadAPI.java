@@ -1,8 +1,9 @@
 public class ThreadAPI {
     public static void main(String[] args) {
-        FinishBar finishBar = new FinishBar();
-        FinishBarTest finishBarTest = new FinishBarTest();
-        finishBar.start();
-        finishBarTest.start();
+        GerarPDF gerarPDF = new GerarPDF();
+        LoadingBar loadingBar = new LoadingBar(gerarPDF);
+
+        gerarPDF.start();
+        loadingBar.start();
     }
 }
